@@ -1,2 +1,7 @@
 ---
 # handlers file for msterhuj.chrony
+- name: Restart chrony
+  ansible.builtin.service:
+    name: "chronyd"
+    state: restarted
+    enabled: true

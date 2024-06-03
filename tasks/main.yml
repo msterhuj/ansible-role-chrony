@@ -1,2 +1,22 @@
 ---
 # tasks file for msterhuj.chrony
+
+
+- name: "Install chrony"
+  ansible.builtin.package:
+    name: "chrony"
+    state: present
+    update_cache: yes
+
+- name: "Generate chrony.conf"
+  ansible.builtin.template:
+    src: "chrony.conf.j2"
+    dest: "/etc/chrony/chrony.conf"
+    owner: "root"
+    group: "root"
+    mode: "0644"
+  notify: "Restart chrony"
+
+- name: "Set server timezone"
+  ansible.builtin.timezone:
+    name: "{{ chrony_server_timezone }}"

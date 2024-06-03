@@ -1,2 +1,32 @@
 ---
 # defaults file for msterhuj.chrony
+
+# Use time sources from DHCP.
+chrony_enable_dhcp_source: false
+
+chrony_enable_tracking_measurements_statistics: false
+
+chrony_ntp_pools: []
+#  - ntp.ubuntu.com iburst maxsources 4
+
+# mode client
+chrony_allow: []
+
+# to set mode server
+#chrony_allow: ["0/0"]
+
+chrony_deny: []
+
+chrony_ntp_servers:
+  - 0.pool.ntp.org
+  - 1.pool.ntp.org
+  - 2.pool.ntp.org
+  - 3.pool.ntp.org
+
+chrony_ntp_peers: []
+
+chrony_leapsectz: "Europe/Paris"
+
+chrony_server_timezone: "Europe/Paris"
+# Todo
+## add key support
