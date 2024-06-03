@@ -9,11 +9,10 @@ chrony_enable_tracking_measurements_statistics: false
 chrony_ntp_pools: []
 #  - ntp.ubuntu.com iburst maxsources 4
 
-# mode client
-chrony_allow: []
-
-# to set mode server
-# chrony_allow: ["0/0"]
+chrony_acls: []
+# example:
+# chrony_acl:
+#   - allow 0/0
 
 chrony_deny: []
 

@@ -72,3 +72,7 @@ makestep 1 3
 # This directive must be commented out when using time sources serving
 # leap-smeared time.
 leapsectz {{ chrony_leapsectz }}
+
+{% for chrony_acl in chrony_acls %}
+{{ chrony_acl }}
+{% endfor %}
