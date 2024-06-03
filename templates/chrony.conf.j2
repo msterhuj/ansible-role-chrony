@@ -30,8 +30,6 @@ server {{ server }}
 peer {{ peer }}
 {% endfor %}
 
-{% for refclock in chrony_ntp_refclocks %}
-
 {% if chrony_enable_dhcp_source %}
 # Use time sources from DHCP.
 sourcedir /run/chrony-dhcp
