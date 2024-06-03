@@ -1,12 +1,10 @@
 ---
 # tasks file for msterhuj.chrony
-
-
 - name: "Install chrony"
   ansible.builtin.package:
     name: "chrony"
     state: present
-    update_cache: yes
+    update_cache: true
 
 - name: "Generate chrony.conf"
   ansible.builtin.template:

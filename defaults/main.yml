@@ -13,7 +13,7 @@ chrony_ntp_pools: []
 chrony_allow: []
 
 # to set mode server
-#chrony_allow: ["0/0"]
+# chrony_allow: ["0/0"]
 
 chrony_deny: []
 
